@@ -1,0 +1,14 @@
+/* themes.css */
+:root[data-theme="light"] {
+  --bg: #f7fafc;
+  --text: #1a202c;
+  --accent: #3182ce;   /* blue */
+}
+
+:root[data-theme="dark"] {
+  --bg: #2d3748;
+  --text: #e2e8f0;
+  --accent: #63b3ed;   /* lighter blue */
+}
+
+/* You can add more variables (border, shadow, etc.) as needed. */

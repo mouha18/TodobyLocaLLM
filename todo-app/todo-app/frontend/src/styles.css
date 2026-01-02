@@ -82,3 +82,22 @@ button.delete-btn {
   cursor: pointer;
 }
 button.delete-btn:hover { color: #c53030; }
+
+/* ---------- Theme Variables ---------- */
+:root[data-theme="neutral"] {
+  --bg: #f7fafc;
+  --text: #1a202c;
+  --accent: #3182ce;   /* blue */
+}
+:root[data-theme="happy"] {
+  --bg: #fffbeb;       /* light yellow */
+  --text: #4a5568;
+  --accent: #38a169;   /* green */
+}
+
+/* ---------- Global ---------- */
+body, .app {
+  background: var(--bg);
+  color: var(--text);
+}
+button.add-btn { background: var(--accent); }
