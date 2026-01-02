@@ -1,0 +1,84 @@
+/* ── General layout ─────────────────────────────────────── */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #f7fafc;           /* light gray */
+  color: #1a202c;                /* dark gray text */
+}
+
+#root {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* ── Typography ─────────────────────────────────────────── */
+h1 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  color: #718096; /* muted gray */
+}
+
+/* ── Form ───────────────────────────────────────────────── */
+form {
+  display: flex;
+  gap: .5rem;
+  margin-bottom: 1.5rem;
+}
+input[type="text"] {
+  flex: 1;
+  padding: .75rem .85rem;
+  border: 1px solid #cbd5e0; /* light gray */
+  border-radius: .375rem;
+  font-size: 1rem;
+}
+button.add-btn {
+  background: #3182ce;          /* blue */
+  color: white;
+  padding: .75rem 1.25rem;
+  border: none;
+  border-radius: .375rem;
+  cursor: pointer;
+  transition: background .15s ease-in-out;
+}
+button.add-btn:hover { background: #2b6cb0; }
+
+/* ── Todo List ───────────────────────────────────────────── */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  background: white;
+  padding: .85rem .75rem;
+  border-radius: .375rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+  margin-bottom: .5rem;
+}
+li:last-child { margin-bottom: 0; }
+
+li.completed span {
+  text-decoration: line-through;
+  color: #a0aec0; /* muted */
+}
+
+button.delete-btn {
+  background: transparent;
+  border: none;
+  color: #e53e3e;          /* red */
+  font-size: 1.2rem;
+  margin-left: auto;
+  cursor: pointer;
+}
+button.delete-btn:hover { color: #c53030; }
