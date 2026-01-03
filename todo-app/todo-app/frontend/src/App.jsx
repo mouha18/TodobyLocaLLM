@@ -47,25 +47,25 @@ export default function App() {
 
   /* ---------- Helper: Toggle completion ---------- */
   const toggleTodo = id => {
-    const todo = todos.find(t => t.id === id);
-    axios
-      .put(`${API}/${id}`, { completed: !todo.completed })
-      .then(r => {
-        setTodos(todos.map(t => (t.id === id ? r.data : t)));
+  const todo = todos.find(t => t.id === id);
+  axios
+    .put(`${API}/${id}`, { completed: !todo.completed })
+    .then(r => {
+      setTodos(todos.map(t => (t.id === id ? r.data : t)));
 
         // 🎉 Confetti if now completed
-        if (!todo.completed) {
-          confetti({
-            particleCount: 80,
-            spread: 70,
-            origin: { y: 0.6 }
-          });
+      if (!todo.completed) {
+        confetti({
+          particleCount: 80,
+          spread: 70,
+          origin: { y: 0.6 }
+        });
 
-          // Add points
-          setPoints(p => p + 10);
-        }
-      });
-  };
+        // Add points
+        setPoints(p => p + 10);
+      }
+    });
+};
 
   /* ---------- Helper: Delete ---------- */
   const deleteTodo = id =>
